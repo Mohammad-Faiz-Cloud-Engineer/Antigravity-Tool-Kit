@@ -1,0 +1,49 @@
+{
+  "name": "antigravity-tool-kit",
+  "version": "2.1.0",
+  "description": "Production-ready AI agent templates with 16 specialist agents, 40 skills, and 11 workflows for enhanced AI-assisted development.",
+  "main": "bin/cli.js",
+  "bin": {
+    "antigravity-tool-kit": "./bin/cli.js",
+    "atk": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "node test/test.js",
+    "validate": "node scripts/validate.js",
+    "prepare": "node scripts/prepare.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohammad-Faiz-Cloud-Engineer/antigravity-tool-kit.git"
+  },
+  "homepage": "https://github.com/Mohammad-Faiz-Cloud-Engineer/antigravity-tool-kit#readme",
+  "bugs": {
+    "url": "https://github.com/Mohammad-Faiz-Cloud-Engineer/antigravity-tool-kit/issues"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "ai-assistant",
+    "coding-assistant",
+    "development-tools",
+    "automation",
+    "workflow",
+    "templates",
+    "gemini",
+    "claude",
+    "copilot",
+    "productivity"
+  ],
+  "author": "Mohammad Faiz",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    ".agent/",
+    "bin/",
+    "scripts/",
+    "README.md",
+    "LICENSE"
+  ]
+}
