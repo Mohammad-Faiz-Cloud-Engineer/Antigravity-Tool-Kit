@@ -4,11 +4,13 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
-[![npm version](https://img.shields.io/npm/v/antigravity-tool-kit.svg)](https://www.npmjs.com/package/antigravity-tool-kit)
+[![GitHub release](https://img.shields.io/github/v/release/Mohammad-Faiz-Cloud-Engineer/Antigravity-Tool-Kit)](https://github.com/Mohammad-Faiz-Cloud-Engineer/Antigravity-Tool-Kit/releases)
 
 A powerful, comprehensive collection of AI agent templates, domain-specific skills, and intelligent workflows designed to transform your development experience. Built for developers who demand excellence and want to maximize productivity with AI-powered assistance across the entire software development lifecycle.
 
 **Includes 25+ specialized agents, 60+ deep skills, and 18 intelligent workflows covering every aspect of modern software development.**
+
+📚 **[Quick Start Guide](QUICK_START.md)** | 📖 **[Installation Guide](INSTALLATION.md)** | 🤝 **[Contributing](CONTRIBUTING.md)**
 
 ---
 
@@ -26,26 +28,39 @@ A powerful, comprehensive collection of AI agent templates, domain-specific skil
 
 ### Installation
 
-Install the toolkit in your project with a single command:
+Install the toolkit directly from GitHub in your project:
 
 ```bash
-npx antigravity-tool-kit init
+npx github:Mohammad-Faiz-Cloud-Engineer/Antigravity-Tool-Kit init
 ```
 
-Or install globally for use across all projects:
+Or clone the repository and run locally:
 
 ```bash
-npm install -g antigravity-tool-kit
+# Clone the repository
+git clone https://github.com/Mohammad-Faiz-Cloud-Engineer/Antigravity-Tool-Kit.git
+cd Antigravity-Tool-Kit
+
+# Run the installer
+node bin/cli.js init --path /path/to/your/project
+```
+
+Or install globally from GitHub:
+
+```bash
+npm install -g github:Mohammad-Faiz-Cloud-Engineer/Antigravity-Tool-Kit
 antigravity-tool-kit init
 ```
 
-**Short alias available:**
+**Short alias available (after global install):**
 
 ```bash
 atk init
 ```
 
 This creates a `.agent` folder in your project containing all templates.
+
+**For more installation options, see [INSTALLATION.md](INSTALLATION.md)**
 
 ---
 
@@ -392,22 +407,36 @@ Invoke powerful workflows with intuitive slash commands:
 
 ## CLI Commands
 
+After global installation, you can use these commands:
+
 | Command | Description |
 |---------|-------------|
-| `atk init` | Install .agent folder in current directory |
-| `atk update` | Update to latest version |
-| `atk status` | Check installation status |
-| `atk version` | Show version number |
-| `atk help` | Display help information |
+| `antigravity-tool-kit init` or `atk init` | Install .agent folder in current directory |
+| `antigravity-tool-kit update` or `atk update` | Update to latest version |
+| `antigravity-tool-kit status` or `atk status` | Check installation status |
+| `antigravity-tool-kit version` or `atk version` | Show version number |
+| `antigravity-tool-kit help` or `atk help` | Display help information |
 
 ### CLI Options
 
 ```bash
-atk init --force        # Overwrite existing installation
-atk init --path ./app   # Install in specific directory
-atk init --branch dev   # Use specific git branch
-atk init --quiet        # Suppress output
-atk init --dry-run      # Preview without executing
+antigravity-tool-kit init --force        # Overwrite existing installation
+antigravity-tool-kit init --path ./app   # Install in specific directory
+antigravity-tool-kit init --branch main  # Use specific git branch
+antigravity-tool-kit init --quiet        # Suppress output
+antigravity-tool-kit init --dry-run      # Preview without executing
+```
+
+### Without Global Installation
+
+If you don't want to install globally, you can run directly from the cloned repository:
+
+```bash
+# Clone once
+git clone https://github.com/Mohammad-Faiz-Cloud-Engineer/Antigravity-Tool-Kit.git
+
+# Run from anywhere
+node /path/to/Antigravity-Tool-Kit/bin/cli.js init
 ```
 
 ---
@@ -630,7 +659,10 @@ Use the fullstack-engineer agent to create a complete SaaS application:
 
 ## Documentation
 
-Complete documentation is available in `.agent/ARCHITECTURE.md` after installation.
+- **Installation Guide**: [INSTALLATION.md](INSTALLATION.md) - Multiple installation methods
+- **Complete Documentation**: Available in `.agent/ARCHITECTURE.md` after installation
+- **Changelog**: [CHANGELOG.md](CHANGELOG.md) - Version history and updates
+- **Contributing**: [CONTRIBUTING.md](CONTRIBUTING.md) - How to contribute
 
 ---
 
@@ -640,23 +672,39 @@ Complete documentation is available in `.agent/ARCHITECTURE.md` after installati
 
 ```bash
 # Clone repository
-git clone https://github.com/Mohammad-Faiz-Cloud-Engineer/antigravity-tool-kit.git
-cd antigravity-tool-kit
+git clone https://github.com/Mohammad-Faiz-Cloud-Engineer/Antigravity-Tool-Kit.git
+cd Antigravity-Tool-Kit
 
-# Run tests
-npm test
+# Run tests (no dependencies needed)
+node test/test.js
 
 # Validate components
-npm run validate
+node scripts/validate.js
+
+# Test CLI
+node bin/cli.js --help
 ```
 
 ### Run Tests
 
 ```bash
-npm test
+node test/test.js
 ```
 
 All tests must pass before deployment.
+
+### Local Development
+
+```bash
+# Test the CLI locally
+node bin/cli.js init --dry-run
+
+# Install in a test project
+node bin/cli.js init --path /path/to/test/project
+
+# Check version
+node bin/cli.js version
+```
 
 ---
 
