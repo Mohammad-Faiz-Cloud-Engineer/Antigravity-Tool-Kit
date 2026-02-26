@@ -1,7 +1,7 @@
 {
   "name": "antigravity-tool-kit",
   "version": "2.1.0",
-  "description": "Production-ready AI agent templates with 16 specialist agents, 40 skills, and 11 workflows for enhanced AI-assisted development.",
+  "description": "Comprehensive AI agent toolkit featuring 25+ specialized agents, 60+ domain-specific skills, and 18 intelligent workflows. Accelerate development with expert AI assistance for frontend, backend, DevOps, security, testing, data science, blockchain, cloud architecture, and more. Zero dependencies, easy setup, works with any AI coding assistant.",
   "main": "bin/cli.js",
   "bin": {
     "antigravity-tool-kit": "./bin/cli.js",
@@ -10,7 +10,8 @@
   "scripts": {
     "test": "node test/test.js",
     "validate": "node scripts/validate.js",
-    "prepare": "node scripts/prepare.js"
+    "prepare": "node scripts/prepare.js",
+    "pretest": "node scripts/validate.js"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,31 @@
     "gemini",
     "claude",
     "copilot",
-    "productivity"
+    "productivity",
+    "cli",
+    "developer-tools",
+    "ai-agents",
+    "code-generation",
+    "devops",
+    "frontend",
+    "backend",
+    "testing",
+    "security",
+    "architecture",
+    "best-practices",
+    "machine-learning",
+    "blockchain",
+    "web3",
+    "cloud-native",
+    "kubernetes",
+    "docker",
+    "microservices",
+    "fullstack",
+    "mobile-development",
+    "data-science",
+    "mlops",
+    "serverless",
+    "ci-cd"
   ],
   "author": "Mohammad Faiz",
   "license": "MIT",
@@ -44,6 +69,8 @@
     "bin/",
     "scripts/",
     "README.md",
-    "LICENSE"
-  ]
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "preferGlobal": true
 }
