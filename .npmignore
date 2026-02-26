@@ -1,0 +1,34 @@
+# Development files
+.git/
+.github/
+.vscode/
+.idea/
+
+# Testing
+test/
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+.temp_ag_kit/
+.DS_Store
+Thumbs.db
+
+# Documentation (keep only essential)
+docs/
+examples/
+
+# CI/CD
+.travis.yml
+.gitlab-ci.yml
+azure-pipelines.yml
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.*
